@@ -10,3 +10,8 @@ int foo()
 {
     return 42;
 }
+
+char* hello()
+{
+    return "sup";
+}
