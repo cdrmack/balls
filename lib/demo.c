@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
@@ -11,7 +12,14 @@ int foo()
     return 42;
 }
 
-char* hello()
+char buffer[50];
+char* hello(char *name)
 {
-    return "sup";
+    if (strlen(name) > 40)
+    {
+        return "Name is too long";
+    }
+
+    strcpy(buffer, "Hello ");
+    return strcat(buffer, name);
 }
