@@ -1,6 +1,10 @@
 #include <emscripten.h>
 #include <stdio.h>
 
+EM_JS(void, jsFunction, (int n), {
+    console.log("Call from EM_JS: " + n);
+});
+
 int main()
 {
     printf("Hello from C!\n");
@@ -18,6 +22,8 @@ int main()
 
     char *jsValStr = emscripten_run_script_string("getStr()");
     printf("Called js getStr(), it returned: %s\n", jsValStr);
+
+    jsFunction(42);
 
     return 0;
 }
