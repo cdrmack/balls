@@ -19,11 +19,13 @@
       const canvas = document.getElementById('canvas')
       const context = canvas.getContext('2d')
 
-      // draw circle
-      context.beginPath()
-      context.arc(400, 400, 100, 0, 2*Math.PI, false)
-      context.fillStyle = 'dodgerblue'
-      context.fill()
+      const render = () => {
+	  // draw circle
+	  context.beginPath()
+	  context.arc(400, 400, 100, 0, 2*Math.PI, false)
+	  context.fillStyle = 'dodgerblue'
+	  context.fill()
+      }
     </script>
   </body>
 </html>
