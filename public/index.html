@@ -3,20 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>WASM</title>
+    <style media="screen">
+      body, canvas {
+	  width: 100%;
+	  height: 100%;
+	  margin: 0;
+      }
+      </style>
   </head>
   <body>
-    <h1>WASM Demo</h1>
-    <script src="imports.js"></script>
+    <canvas id="canvas" width="2000" height="2000"></canvas>
+    <script src="canvas.js"></script>
     <script>
+      // create canvas context
+      const canvas = document.getElementById('canvas')
+      const context = canvas.getContext('2d')
 
-      function getNum() {
-	  return 22;
-      }
-
-      function getStr() {
-	  return "sup from js"
-      }
-
+      // draw circle
+      context.beginPath()
+      context.arc(400, 400, 100, 0, 2*Math.PI, false)
+      context.fillStyle = 'dodgerblue'
+      context.fill()
     </script>
   </body>
 </html>
