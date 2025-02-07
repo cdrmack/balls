@@ -167,8 +167,8 @@ int main()
         animation_data[i].x = x;
         animation_data[i].y = y;
         animation_data[i].r = r;
-        animation_data[i].vx = rand() % 10;
-        animation_data[i].vy = rand() % 10;
+        animation_data[i].vx = rand() % 10 + 1;
+        animation_data[i].vy = rand() % 10 + 1;
         animation_data[i].dx = 1;
         animation_data[i].dy = 1;
     }
